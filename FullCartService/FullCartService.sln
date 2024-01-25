@@ -7,6 +7,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FullCart.Api", "FullCart.Ap
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FullCart.Api", "FullCart.Api\FullCart.Api.csproj", "{8767E482-29DE-4BC0-A4DF-46CB8F5029C5}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FullCart.Application", "FullCart.Application", "{8E0B00E2-5B95-4E0B-8C36-6D3B091C8DA4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FullCart.Application", "FullCart.Application\FullCart.Application.csproj", "{8D9F426F-ACB4-4DB9-8059-CBF6EADD236F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,12 +21,17 @@ Global
 		{8767E482-29DE-4BC0-A4DF-46CB8F5029C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8767E482-29DE-4BC0-A4DF-46CB8F5029C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8767E482-29DE-4BC0-A4DF-46CB8F5029C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D9F426F-ACB4-4DB9-8059-CBF6EADD236F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D9F426F-ACB4-4DB9-8059-CBF6EADD236F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D9F426F-ACB4-4DB9-8059-CBF6EADD236F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D9F426F-ACB4-4DB9-8059-CBF6EADD236F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{8767E482-29DE-4BC0-A4DF-46CB8F5029C5} = {3EC25850-589A-4896-B7BA-A0AD5DD6EEC1}
+		{8D9F426F-ACB4-4DB9-8059-CBF6EADD236F} = {8E0B00E2-5B95-4E0B-8C36-6D3B091C8DA4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {250BAC6D-58A4-414F-99A7-DA3DF7C510C8}
