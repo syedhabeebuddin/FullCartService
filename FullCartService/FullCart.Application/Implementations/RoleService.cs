@@ -24,5 +24,30 @@ namespace FullCart.Application.Implementations
             var result = await _repository.AddRoleAsync(eRole);
             return new Role { Name = result.Name, Description = result.Description };            
         }
+
+        public async Task<Role> GetAsync(int id)
+        {
+            var result = await _repository.GetAsync(id);
+            return new Role { Name = result.Name, Description = result.Description };
+        }
+
+        public async Task<Role> UpdateAsync(int id,Role role)
+        {
+            var eRole = new Infrastructure.Database.Entities.Role()
+            {
+                Id = id,
+                UpdatedBy = 1,
+                UpdatedOn = DateTime.Now,
+                Description = role.Description,
+                Name = role.Name
+            };
+            var result = await _repository.UpdateAsync(eRole);
+            return role;
+        }
+
+        public async Task<bool> DeleteAsync(int id)
+        {
+            return await _repository.DeleteAsync(id);
+        }
     }
 }

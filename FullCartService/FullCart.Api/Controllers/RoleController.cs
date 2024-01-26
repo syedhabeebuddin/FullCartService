@@ -22,9 +22,9 @@ namespace FullCart.Api.Controllers
 
         [HttpGet]
         [Route("{id}")]
-        public IActionResult Get(int id)
+        public async Task<IActionResult> Get(int id)
         {
-            return Ok("done");
+            return Ok(await _roleService.GetAsync(id));
         }
 
         [HttpGet]
@@ -35,16 +35,16 @@ namespace FullCart.Api.Controllers
 
         [HttpPut]
         [Route("{id}")]
-        public IActionResult Put(int id, Role role)
+        public async Task<IActionResult> Put(int id, Role role)
         {
-            return Ok("done");
+            return Ok(await _roleService.UpdateAsync(id,role));
         }
 
         [HttpDelete]
         [Route("{id}")]
-        public IActionResult Delete(int id)
+        public async Task<IActionResult> Delete(int id)
         {
-            return Ok("done");
+            return Ok(await _roleService.DeleteAsync(id));
         }
     }
 }
