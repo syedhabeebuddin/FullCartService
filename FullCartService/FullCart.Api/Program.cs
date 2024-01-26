@@ -1,6 +1,10 @@
+using FullCart.Api.Configurations;
+using FullCart.Infrastructure.Database.Configurations;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddFullCartServices(builder.Configuration);
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

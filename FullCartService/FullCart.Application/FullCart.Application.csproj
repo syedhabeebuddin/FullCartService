@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\FullCart.Data\FullCart.Data.csproj" />
+    <ProjectReference Include="..\FullCart.Domain\FullCart.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
