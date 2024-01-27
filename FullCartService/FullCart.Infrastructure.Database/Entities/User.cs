@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations.Schema;
 
 namespace FullCart.Infrastructure.Database.Entities
 {
+    [Table("User")]
     public class User : BaseEntity
     {
         public string FirstName { get; set; }
@@ -14,6 +11,7 @@ namespace FullCart.Infrastructure.Database.Entities
         public string Username { get; set; }
         public string Password { get; set; }
         public bool IsActive { get; set; }
-        public virtual Role Role{get;set;}
+        public int RoleId { get; set; }
+        public Role Role{get;set;}
     }
 }

@@ -9,6 +9,8 @@ namespace FullCart.Data.Configurations
         public static IServiceCollection AddFullCartDataServices(this IServiceCollection services)
         {
             services.AddScoped<IRoleRepository, RoleRepository>();
+            services.AddScoped<IUserRepository, UserRepository>();
+
             return services;
         }
     }

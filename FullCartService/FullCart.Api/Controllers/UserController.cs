@@ -1,6 +1,6 @@
-﻿using FullCart.Domain.Models;
-using Microsoft.AspNetCore.Http;
+﻿using FullCart.Application.Contracts;
 using Microsoft.AspNetCore.Mvc;
+using User = FullCart.Domain.Models.User;
 
 namespace FullCart.Api.Controllers
 {
@@ -8,17 +8,23 @@ namespace FullCart.Api.Controllers
     [ApiController]
     public class UserController : ControllerBase
     {
-        [HttpPost]
-        public IActionResult Post(User user)
+        private readonly IUserService _userService;
+        public UserController(IUserService userService)
         {
-            return Ok("done");
+            _userService = userService;
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Post(User user)
+        {
+            return Ok(await _userService.AddUser(user));
         }
 
         [HttpGet]
         [Route("{id}")]
-        public IActionResult Get(int id)
+        public async Task<IActionResult> Get(int id)
         {
-            return Ok("done");
+            return Ok(await _userService.GetAsync(id));
         }
 
         [HttpGet]
